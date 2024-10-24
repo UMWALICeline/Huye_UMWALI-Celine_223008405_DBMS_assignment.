@@ -1,0 +1,325 @@
+mysql> CREATE DATABASE RUHANDE;
+ERROR 1007 (HY000): Can't create database 'ruhande'; database exists
+mysql> USE RUHANDE
+Database changed
+mysql> CREATE TABLE NGOMA(ID INT(20), FNAME CHAR(10), LNAME CHAR(10), GENDER CHAR(2), DISTRICT CHAR(20), SECTOR CHAR(20), CELL CHAR(15), EMAIL CHAR(20), TELEPHONE INT(15));
+Query OK, 0 rows affected, 2 warnings (0.03 sec)
+
+mysql> INSERT INTO NGOMA VALUES (12345580707674,'INGABIRE','NADINE','F','HUYE','NGOMA','BUTARE','KABUTARE','NADING01@GMAIL.COM',0790047420);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into NGOMA values(1,'xoxo','keke','f','huye','kizungu','kinihira','rutaraka','xoxo234@gmai.com',079004739);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into NGOMA values(345455451,'xoxo','keke','f','huye','kizungu','kinihira','rutaraka','xoxo234@gmai.com',079004739);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into NGOMA values(345455451,'xoxo','keke','f','huye','kizungu','kinihira','xoxo234@gmai.com',079004739);079004739);
+Query OK, 1 row affected (0.00 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '079004739)' at line 1
+mysql> select* from NGOMA;
++-----------+-------+-------+--------+----------+---------+----------+------------------+-----------+
+| ID        | FNAME | LNAME | GENDER | DISTRICT | SECTOR  | CELL     | EMAIL            | TELEPHONE |
++-----------+-------+-------+--------+----------+---------+----------+------------------+-----------+
+| 345455451 | xoxo  | keke  | f      | huye     | kizungu | kinihira | xoxo234@gmai.com |  79004739 |
++-----------+-------+-------+--------+----------+---------+----------+------------------+-----------+
+1 row in set (0.00 sec)
+
+mysql> insert into NGOMA values(23096551,'dodo','dodane','m','nyanza','busogo','kirehe','Dodo098@gmai.com',079739009);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into NGOMA value(67584751,'tetao','sophie','f','nyanza','busogo','kirehe','Didi0038@gmai.com',079945689);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into NGOMA value(87563738,'kirabo','selae','m','nyanza','busogo','kirehe','kobwa2338@gmai.com',079945689);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into NGOMA value(768940458,'gwiza','uwase','m','nyanza','busogo','kirehe','keke458@gmai.com',07848989);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into NGOMA value(7673048,'olga','manzi','f','nyanza','busogo','kirehe','naddy58@gmai.com',875463389);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into NGOMA value(76321118,'isimbi','marti','f','nyanza','busogo','kirehe','bestie8@gmai.com',7683389);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into NGOMA value(76347488,'ibrah','mimi','m','nyanza','busogo','kirehe','sylvie98@gmai.com',78900009);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into NGOMA value(44748438,'celine','umwali','m','nyanza','busogo','kirehe','confy98@gmai.com',75647339);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into NGOMA value(40162068,'frede','muhizi','f','nyanza','busogo','kirehe','maria45@gmai.com',78421139);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> slect* from NGOMA;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'slect* from NGOMA' at line 1
+mysql> select* from NGOMA;
++-----------+--------+--------+--------+----------+---------+----------+--------------------+-----------+
+| ID        | FNAME  | LNAME  | GENDER | DISTRICT | SECTOR  | CELL     | EMAIL              | TELEPHONE |
++-----------+--------+--------+--------+----------+---------+----------+--------------------+-----------+
+| 345455451 | xoxo   | keke   | f      | huye     | kizungu | kinihira | xoxo234@gmai.com   |  79004739 |
+|  23096551 | dodo   | dodane | m      | nyanza   | busogo  | kirehe   | Dodo098@gmai.com   |  79739009 |
+|  67584751 | tetao  | sophie | f      | nyanza   | busogo  | kirehe   | Didi0038@gmai.com  |  79945689 |
+|  87563738 | kirabo | selae  | m      | nyanza   | busogo  | kirehe   | kobwa2338@gmai.com |  79945689 |
+| 768940458 | gwiza  | uwase  | m      | nyanza   | busogo  | kirehe   | keke458@gmai.com   |   7848989 |
+|   7673048 | olga   | manzi  | f      | nyanza   | busogo  | kirehe   | naddy58@gmai.com   | 875463389 |
+|  76321118 | isimbi | marti  | f      | nyanza   | busogo  | kirehe   | bestie8@gmai.com   |   7683389 |
+|  76347488 | ibrah  | mimi   | m      | nyanza   | busogo  | kirehe   | sylvie98@gmai.com  |  78900009 |
+|  44748438 | celine | umwali | m      | nyanza   | busogo  | kirehe   | confy98@gmai.com   |  75647339 |
+|  40162068 | frede  | muhizi | f      | nyanza   | busogo  | kirehe   | maria45@gmai.com   |  78421139 |
++-----------+--------+--------+--------+----------+---------+----------+--------------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA ADD STATUS;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> alter table NGOMA add status char(10);
+Query OK, 10 rows affected (0.05 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select* from NGOMA;
++-----------+--------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+| ID        | FNAME  | LNAME  | GENDER | DISTRICT | SECTOR  | CELL     | EMAIL              | TELEPHONE | status |
++-----------+--------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+| 345455451 | xoxo   | keke   | f      | huye     | kizungu | kinihira | xoxo234@gmai.com   |  79004739 | NULL   |
+|  23096551 | dodo   | dodane | m      | nyanza   | busogo  | kirehe   | Dodo098@gmai.com   |  79739009 | NULL   |
+|  67584751 | tetao  | sophie | f      | nyanza   | busogo  | kirehe   | Didi0038@gmai.com  |  79945689 | NULL   |
+|  87563738 | kirabo | selae  | m      | nyanza   | busogo  | kirehe   | kobwa2338@gmai.com |  79945689 | NULL   |
+| 768940458 | gwiza  | uwase  | m      | nyanza   | busogo  | kirehe   | keke458@gmai.com   |   7848989 | NULL   |
+|   7673048 | olga   | manzi  | f      | nyanza   | busogo  | kirehe   | naddy58@gmai.com   | 875463389 | NULL   |
+|  76321118 | isimbi | marti  | f      | nyanza   | busogo  | kirehe   | bestie8@gmai.com   |   7683389 | NULL   |
+|  76347488 | ibrah  | mimi   | m      | nyanza   | busogo  | kirehe   | sylvie98@gmai.com  |  78900009 | NULL   |
+|  44748438 | celine | umwali | m      | nyanza   | busogo  | kirehe   | confy98@gmai.com   |  75647339 | NULL   |
+|  40162068 | frede  | muhizi | f      | nyanza   | busogo  | kirehe   | maria45@gmai.com   |  78421139 | NULL   |
++-----------+--------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+10 rows in set (0.00 sec)
+
+mysql> update table NGOMA status='single';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table NGOMA status='single'' at line 1
+mysql> update table NGOMA status="single";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table NGOMA status="single"' at line 1
+mysql> update NGOMA status='single';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='single'' at line 1
+mysql> update NGOMA status="single";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '="single"' at line 1
+mysql> update NGOMA status=single;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=single' at line 1
+mysql> update NGOMA set status='single';
+Query OK, 10 rows affected (0.00 sec)
+Rows matched: 10  Changed: 10  Warnings: 0
+
+mysql> select* from NGOMA;
++-----------+--------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+| ID        | FNAME  | LNAME  | GENDER | DISTRICT | SECTOR  | CELL     | EMAIL              | TELEPHONE | status |
++-----------+--------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+| 345455451 | xoxo   | keke   | f      | huye     | kizungu | kinihira | xoxo234@gmai.com   |  79004739 | single |
+|  23096551 | dodo   | dodane | m      | nyanza   | busogo  | kirehe   | Dodo098@gmai.com   |  79739009 | single |
+|  67584751 | tetao  | sophie | f      | nyanza   | busogo  | kirehe   | Didi0038@gmai.com  |  79945689 | single |
+|  87563738 | kirabo | selae  | m      | nyanza   | busogo  | kirehe   | kobwa2338@gmai.com |  79945689 | single |
+| 768940458 | gwiza  | uwase  | m      | nyanza   | busogo  | kirehe   | keke458@gmai.com   |   7848989 | single |
+|   7673048 | olga   | manzi  | f      | nyanza   | busogo  | kirehe   | naddy58@gmai.com   | 875463389 | single |
+|  76321118 | isimbi | marti  | f      | nyanza   | busogo  | kirehe   | bestie8@gmai.com   |   7683389 | single |
+|  76347488 | ibrah  | mimi   | m      | nyanza   | busogo  | kirehe   | sylvie98@gmai.com  |  78900009 | single |
+|  44748438 | celine | umwali | m      | nyanza   | busogo  | kirehe   | confy98@gmai.com   |  75647339 | single |
+|  40162068 | frede  | muhizi | f      | nyanza   | busogo  | kirehe   | maria45@gmai.com   |  78421139 | single |
++-----------+--------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+10 rows in set (0.00 sec)
+
+mysql> alter NGOMA drop gender;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NGOMA drop gender' at line 1
+mysql> alter table NGOMA drop GENDER;
+Query OK, 10 rows affected (0.05 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select* from NGOMA;
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+| ID        | FNAME  | LNAME  | DISTRICT | SECTOR  | CELL     | EMAIL              | TELEPHONE | status |
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+| 345455451 | xoxo   | keke   | huye     | kizungu | kinihira | xoxo234@gmai.com   |  79004739 | single |
+|  23096551 | dodo   | dodane | nyanza   | busogo  | kirehe   | Dodo098@gmai.com   |  79739009 | single |
+|  67584751 | tetao  | sophie | nyanza   | busogo  | kirehe   | Didi0038@gmai.com  |  79945689 | single |
+|  87563738 | kirabo | selae  | nyanza   | busogo  | kirehe   | kobwa2338@gmai.com |  79945689 | single |
+| 768940458 | gwiza  | uwase  | nyanza   | busogo  | kirehe   | keke458@gmai.com   |   7848989 | single |
+|   7673048 | olga   | manzi  | nyanza   | busogo  | kirehe   | naddy58@gmai.com   | 875463389 | single |
+|  76321118 | isimbi | marti  | nyanza   | busogo  | kirehe   | bestie8@gmai.com   |   7683389 | single |
+|  76347488 | ibrah  | mimi   | nyanza   | busogo  | kirehe   | sylvie98@gmai.com  |  78900009 | single |
+|  44748438 | celine | umwali | nyanza   | busogo  | kirehe   | confy98@gmai.com   |  75647339 | single |
+|  40162068 | frede  | muhizi | nyanza   | busogo  | kirehe   | maria45@gmai.com   |  78421139 | single |
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+10 rows in set (0.00 sec)
+
+mysql> select LNAME,SECTOR,CELL;
+ERROR 1054 (42S22): Unknown column 'LNAME' in 'field list'
+mysql> select ('LNAME','SECTOR','CELL');
+ERROR 1241 (21000): Operand should contain 1 column(s)
+mysql> select 'LNAME','SECTOR','CELL';
++-------+--------+------+
+| LNAME | SECTOR | CELL |
++-------+--------+------+
+| LNAME | SECTOR | CELL |
++-------+--------+------+
+1 row in set (0.00 sec)
+
+mysql> select LNAME,SECTOR,CELL FROM NGOMA;
++--------+---------+----------+
+| LNAME  | SECTOR  | CELL     |
++--------+---------+----------+
+| keke   | kizungu | kinihira |
+| dodane | busogo  | kirehe   |
+| sophie | busogo  | kirehe   |
+| selae  | busogo  | kirehe   |
+| uwase  | busogo  | kirehe   |
+| manzi  | busogo  | kirehe   |
+| marti  | busogo  | kirehe   |
+| mimi   | busogo  | kirehe   |
+| umwali | busogo  | kirehe   |
+| muhizi | busogo  | kirehe   |
++--------+---------+----------+
+10 rows in set (0.00 sec)
+
+mysql> select GENDER='f' OR FNAME='xoxo' from NGOMA;
+ERROR 1054 (42S22): Unknown column 'GENDER' in 'field list'
+mysql> select* FROM NGOMA GENDER='f' OR FNAME='xoxo'
+    -> select* FROM NGOMA GENDER='f' OR FNAME='xoxo' ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='f' OR FNAME='xoxo'
+select* FROM NGOMA GENDER='f' OR FNAME='xoxo'' at line 1
+mysql> select* FROM NGOMA GENDER='f' OR FNAME='xoxo';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='f' OR FNAME='xoxo'' at line 1
+mysql> select* FROM NGOMA WHERE GENDER='f' OR FNAME='xoxo';
+ERROR 1054 (42S22): Unknown column 'GENDER' in 'where clause'
+mysql> select* FROM NGOMA WHERE GENDER='f' OR FNAME='xoxo';
+ERROR 1054 (42S22): Unknown column 'GENDER' in 'where clause'
+mysql> select* FROM NGOMA GENDER='f' OR FNAME='xoxo';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='f' OR FNAME='xoxo'' at line 1
+mysql> select* FROM NGOMA GENDER=f OR FNAME=xoxo;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=f OR FNAME=xoxo' at line 1
+mysql> select* select* from NGOMA where LNAME='keke' or SECTOR='kizungu';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select* from NGOMA where LNAME='keke' or SECTOR='kizungu'' at line 1
+mysql> select* from table NGOMA
+    -> select* from table NGOMA;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table NGOMA
+select* from table NGOMA' at line 1
+mysql> select* from NGOMA;
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+| ID        | FNAME  | LNAME  | DISTRICT | SECTOR  | CELL     | EMAIL              | TELEPHONE | status |
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+| 345455451 | xoxo   | keke   | huye     | kizungu | kinihira | xoxo234@gmai.com   |  79004739 | single |
+|  23096551 | dodo   | dodane | nyanza   | busogo  | kirehe   | Dodo098@gmai.com   |  79739009 | single |
+|  67584751 | tetao  | sophie | nyanza   | busogo  | kirehe   | Didi0038@gmai.com  |  79945689 | single |
+|  87563738 | kirabo | selae  | nyanza   | busogo  | kirehe   | kobwa2338@gmai.com |  79945689 | single |
+| 768940458 | gwiza  | uwase  | nyanza   | busogo  | kirehe   | keke458@gmai.com   |   7848989 | single |
+|   7673048 | olga   | manzi  | nyanza   | busogo  | kirehe   | naddy58@gmai.com   | 875463389 | single |
+|  76321118 | isimbi | marti  | nyanza   | busogo  | kirehe   | bestie8@gmai.com   |   7683389 | single |
+|  76347488 | ibrah  | mimi   | nyanza   | busogo  | kirehe   | sylvie98@gmai.com  |  78900009 | single |
+|  44748438 | celine | umwali | nyanza   | busogo  | kirehe   | confy98@gmai.com   |  75647339 | single |
+|  40162068 | frede  | muhizi | nyanza   | busogo  | kirehe   | maria45@gmai.com   |  78421139 | single |
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set gender=male;
+ERROR 1054 (42S22): Unknown column 'gender' in 'field list'
+mysql> update ngoma set gender='m';
+ERROR 1054 (42S22): Unknown column 'gender' in 'field list'
+mysql> update ngoma set 'gender'=m;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''gender'=m' at line 1
+mysql> select* from NGOMA;
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+| ID        | FNAME  | LNAME  | DISTRICT | SECTOR  | CELL     | EMAIL              | TELEPHONE | status |
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+| 345455451 | xoxo   | keke   | huye     | kizungu | kinihira | xoxo234@gmai.com   |  79004739 | single |
+|  23096551 | dodo   | dodane | nyanza   | busogo  | kirehe   | Dodo098@gmai.com   |  79739009 | single |
+|  67584751 | tetao  | sophie | nyanza   | busogo  | kirehe   | Didi0038@gmai.com  |  79945689 | single |
+|  87563738 | kirabo | selae  | nyanza   | busogo  | kirehe   | kobwa2338@gmai.com |  79945689 | single |
+| 768940458 | gwiza  | uwase  | nyanza   | busogo  | kirehe   | keke458@gmai.com   |   7848989 | single |
+|   7673048 | olga   | manzi  | nyanza   | busogo  | kirehe   | naddy58@gmai.com   | 875463389 | single |
+|  76321118 | isimbi | marti  | nyanza   | busogo  | kirehe   | bestie8@gmai.com   |   7683389 | single |
+|  76347488 | ibrah  | mimi   | nyanza   | busogo  | kirehe   | sylvie98@gmai.com  |  78900009 | single |
+|  44748438 | celine | umwali | nyanza   | busogo  | kirehe   | confy98@gmai.com   |  75647339 | single |
+|  40162068 | frede  | muhizi | nyanza   | busogo  | kirehe   | maria45@gmai.com   |  78421139 | single |
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+--------+
+10 rows in set (0.00 sec)
+
+mysql> select from NGOMA where SECTOR='busogo' and FNAME='gwiza';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from NGOMA where SECTOR='busogo' and FNAME='gwiza'' at line 1
+mysql> select from NGOMA where SECTOR='busogo' and FNAME='gwiza';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from NGOMA where SECTOR='busogo' and FNAME='gwiza'' at line 1
+mysql> select from NGOMA where FNAME='gwiza' and SECTOR='busogo'
+    -> select from NGOMA where FNAME='gwiza' and SECTOR='busogo';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from NGOMA where FNAME='gwiza' and SECTOR='busogo'
+select from NGOMA where FNAME' at line 1
+mysql> select table NGOMA where FNAME='gwiza' and SECTOR='busogo';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table NGOMA where FNAME='gwiza' and SECTOR='busogo'' at line 1
+mysql> select  NGOMA where FNAME='gwiza' and SECTOR='busogo';
+ERROR 1054 (42S22): Unknown column 'NGOMA' in 'field list'
+mysql> select NGOMA where FNAME='gwiza' and SECTOR='busogo';
+ERROR 1054 (42S22): Unknown column 'NGOMA' in 'field list'
+mysql> select from NGOMA where FNAME='gwiza' and SECTOR='busogo';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from NGOMA where FNAME='gwiza' and SECTOR='busogo'' at line 1
+mysql> select * from ngoma where FNAME="isimbi" or CELL="kirehe";
++-----------+--------+--------+----------+--------+--------+--------------------+-----------+--------+
+| ID        | FNAME  | LNAME  | DISTRICT | SECTOR | CELL   | EMAIL              | TELEPHONE | status |
++-----------+--------+--------+----------+--------+--------+--------------------+-----------+--------+
+|  23096551 | dodo   | dodane | nyanza   | busogo | kirehe | Dodo098@gmai.com   |  79739009 | single |
+|  67584751 | tetao  | sophie | nyanza   | busogo | kirehe | Didi0038@gmai.com  |  79945689 | single |
+|  87563738 | kirabo | selae  | nyanza   | busogo | kirehe | kobwa2338@gmai.com |  79945689 | single |
+| 768940458 | gwiza  | uwase  | nyanza   | busogo | kirehe | keke458@gmai.com   |   7848989 | single |
+|   7673048 | olga   | manzi  | nyanza   | busogo | kirehe | naddy58@gmai.com   | 875463389 | single |
+|  76321118 | isimbi | marti  | nyanza   | busogo | kirehe | bestie8@gmai.com   |   7683389 | single |
+|  76347488 | ibrah  | mimi   | nyanza   | busogo | kirehe | sylvie98@gmai.com  |  78900009 | single |
+|  44748438 | celine | umwali | nyanza   | busogo | kirehe | confy98@gmai.com   |  75647339 | single |
+|  40162068 | frede  | muhizi | nyanza   | busogo | kirehe | maria45@gmai.com   |  78421139 | single |
++-----------+--------+--------+----------+--------+--------+--------------------+-----------+--------+
+9 rows in set (0.00 sec)
+
+mysql> select * from ngoma where FNAME="isimbi" and CELL="kirehe";
++----------+--------+-------+----------+--------+--------+------------------+-----------+--------+
+| ID       | FNAME  | LNAME | DISTRICT | SECTOR | CELL   | EMAIL            | TELEPHONE | status |
++----------+--------+-------+----------+--------+--------+------------------+-----------+--------+
+| 76321118 | isimbi | marti | nyanza   | busogo | kirehe | bestie8@gmai.com |   7683389 | single |
++----------+--------+-------+----------+--------+--------+------------------+-----------+--------+
+1 row in set (0.00 sec)
+
+mysql> update ngoma set status="married" where id^C
+mysql> update ngoma set status="married" where id=76321118;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from  ngoma;
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+---------+
+| ID        | FNAME  | LNAME  | DISTRICT | SECTOR  | CELL     | EMAIL              | TELEPHONE | status  |
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+---------+
+| 345455451 | xoxo   | keke   | huye     | kizungu | kinihira | xoxo234@gmai.com   |  79004739 | single  |
+|  23096551 | dodo   | dodane | nyanza   | busogo  | kirehe   | Dodo098@gmai.com   |  79739009 | single  |
+|  67584751 | tetao  | sophie | nyanza   | busogo  | kirehe   | Didi0038@gmai.com  |  79945689 | single  |
+|  87563738 | kirabo | selae  | nyanza   | busogo  | kirehe   | kobwa2338@gmai.com |  79945689 | single  |
+| 768940458 | gwiza  | uwase  | nyanza   | busogo  | kirehe   | keke458@gmai.com   |   7848989 | single  |
+|   7673048 | olga   | manzi  | nyanza   | busogo  | kirehe   | naddy58@gmai.com   | 875463389 | single  |
+|  76321118 | isimbi | marti  | nyanza   | busogo  | kirehe   | bestie8@gmai.com   |   7683389 | married |
+|  76347488 | ibrah  | mimi   | nyanza   | busogo  | kirehe   | sylvie98@gmai.com  |  78900009 | single  |
+|  44748438 | celine | umwali | nyanza   | busogo  | kirehe   | confy98@gmai.com   |  75647339 | single  |
+|  40162068 | frede  | muhizi | nyanza   | busogo  | kirehe   | maria45@gmai.com   |  78421139 | single  |
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+---------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set status="married" where id=345455451;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from ngomna;
+ERROR 1146 (42S02): Table 'ruhande.ngomna' doesn't exist
+mysql> select * from ngoma;
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+---------+
+| ID        | FNAME  | LNAME  | DISTRICT | SECTOR  | CELL     | EMAIL              | TELEPHONE | status  |
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+---------+
+| 345455451 | xoxo   | keke   | huye     | kizungu | kinihira | xoxo234@gmai.com   |  79004739 | married |
+|  23096551 | dodo   | dodane | nyanza   | busogo  | kirehe   | Dodo098@gmai.com   |  79739009 | single  |
+|  67584751 | tetao  | sophie | nyanza   | busogo  | kirehe   | Didi0038@gmai.com  |  79945689 | single  |
+|  87563738 | kirabo | selae  | nyanza   | busogo  | kirehe   | kobwa2338@gmai.com |  79945689 | single  |
+| 768940458 | gwiza  | uwase  | nyanza   | busogo  | kirehe   | keke458@gmai.com   |   7848989 | single  |
+|   7673048 | olga   | manzi  | nyanza   | busogo  | kirehe   | naddy58@gmai.com   | 875463389 | single  |
+|  76321118 | isimbi | marti  | nyanza   | busogo  | kirehe   | bestie8@gmai.com   |   7683389 | married |
+|  76347488 | ibrah  | mimi   | nyanza   | busogo  | kirehe   | sylvie98@gmai.com  |  78900009 | single  |
+|  44748438 | celine | umwali | nyanza   | busogo  | kirehe   | confy98@gmai.com   |  75647339 | single  |
+|  40162068 | frede  | muhizi | nyanza   | busogo  | kirehe   | maria45@gmai.com   |  78421139 | single  |
++-----------+--------+--------+----------+---------+----------+--------------------+-----------+---------+
+10 rows in set (0.00 sec)
+
+mysql>
